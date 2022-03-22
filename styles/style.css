@@ -22,7 +22,7 @@ html{
 
 body{
     font-family: var(--font-main);
-    background: url(../images/pattern-background-desktop.svg),var(--clr-Pale-blue);
+    background: url(../images/pattern-background-mobile.svg),var(--clr-Pale-blue);
     background-repeat: no-repeat;
     background-size: contain;
     min-height: 100vh;
@@ -47,16 +47,20 @@ body{
 }
 
 .card_body-title{
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    font-weight: 900;
     text-align: center;
     color: var(--clr-Dark-blue);
+    margin-top: 2rem;
 }
 
 .card_body-description{
-    font-size: 0.8rem;
+    font-size: 0.89rem;
+    font-weight: 700;
     text-align:center;
     color: var(--clr-Desaturated-blue);
-    margin: 0.5rem 5rem;
+    margin: 1rem 5rem;
+    opacity: 0.9;
 }
 
 .card_plan-box{
@@ -67,26 +71,113 @@ body{
     grid-template-columns: 5rem 10rem 5rem;
     justify-content: center;
     align-items: center;
+    margin-top: 1.5rem;
     
 }
 
 .card_plan-right a{
     color: var(--clr-Bright-blue);
+    font-weight: 700;
     margin: 0rem 2rem;
+    opacity: 1;
 }
+
+.card_plan-right a:hover{
+    opacity: 0.7;
+}
+
+.card_plan-right a:focus {
+  /* Provide a fallback style for browsers
+     that don't support :focus-visible */
+  outline: 3px dotted var(--clr-unsaturated-blue);
+}
+
+.card_plan-right a:focus:not(:focus-visible) {
+  /* Remove the focus indicator on mouse-focus for browsers
+     that do support :focus-visible */
+  outline: none;
+}
+
+.card_plan-right a:focus-visible {
+  /* for browsers that do support :focus-visible */
+  outline: 3px dotted var(--clr-unsaturated-blue);
+}
+
 
 .card_plan-details h2{
     color: var(--clr-Dark-blue);
-    font-size: 1.2rem;
-    font-weight:700;
+    font-size: 1rem;
+    font-weight:800;
+    line-height: 2rem;
 }
 
 .card_plan-details p{
     color: var(--clr-Desaturated-blue);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 700;
+    opacity: 0.9;
 }
 
-.btn_btn-payment {
+.card_btn-holder {
     text-align: center;
+    margin-top: 2.5rem;
 }
+
+
+.btn:focus {
+  /* Provide a fallback style for browsers
+     that don't support :focus-visible */
+  outline: 3px dotted var(--clr-unsaturated-blue);
+}
+
+.btn:focus:not(:focus-visible) {
+  /* Remove the focus indicator on mouse-focus for browsers
+     that do support :focus-visible */
+  outline: none;
+}
+
+.btn:focus-visible {
+  /* for browsers that do support :focus-visible */
+  outline: 3px dotted var(--clr-unsaturated-blue);
+}
+
+
+
+
+.btn_btn-payment{
+     background-color: var(--clr-Bright-blue);
+    color: #fff;
+    padding: 0.8rem 6rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 750;
+    box-shadow: 0 15px 25px hsla(245, 75%, 52%, 0.40);
+    opacity: 1;
+    border: none;
+    transition: all 0.2sec ease;
+}
+
+.btn_btn-payment:hover{
+    opacity:0.8;
+}
+
+.card_btn-cancel{
+    text-align: center;
+    text-decoration: none;
+    color: var(--clr-Desaturated-blue);
+    margin: 2rem 0rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: all 0.2sec ease;
+}
+
+
+@media (min-width:450px) {
+body{
+     background: url(../images/pattern-background-desktop.svg),var(--clr-Pale-blue);
+     background-repeat: no-repeat;
+     background-size: contain;
+}
+
+}
+
